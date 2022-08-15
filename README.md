@@ -1,8 +1,10 @@
 **Solution 1 :  HTTP Request Handling**
+
 Open Index.html  and then open console.
 
 
 **Solution 2 : Counter Function**
+
  We can run counter.js directly
    To execute counter.js - 
    open the terminal 
@@ -10,6 +12,7 @@ Open Index.html  and then open console.
 
 
 **Solution 3 : Component Interaction** 
+
 Please visit this repository. 
 https://github.com/lav77kush/Roonyx2
 
@@ -33,6 +36,7 @@ this._user = user;
 
 
 **1) What’s wrong with this code snippet?**
+
 we have a UserPanelComponent that uses a function call getUserName() in its template to display the full name of a user that is passed in via the private  _user property.
 
 
@@ -59,9 +63,8 @@ By telling Angular that a pipe is pure, Angular knows that the pipe’s return v
 ## For first apporach: 
    Benefits: 
    we can use pure pipes to avoid multiple function calls in every Angular's change detection cycle.
-
-   Drawbacks: Pure pipes only execute when their input values change.
+   Drawbacks: 
+   Pure pipes only execute when their input values change.
 ## For Second apporach: 
     Benefits: By storing calculated value in a variable, we can easily use it in both component and tempalte.
-
-   Drawbacks: have to first create a method to calculate the expected value and then store it in a declared variable. 
+    Drawbacks: have to first create a method to calculate the expected value and then store it in a declared variable. 
