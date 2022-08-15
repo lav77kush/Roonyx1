@@ -1,14 +1,16 @@
 **Solution 1 :  HTTP Request Handling**
 
-Open Index.html  and then open console.
+Open Index.html in the browser  and then open browser's console to see the results.
 
 
 **Solution 2 : Counter Function**
 
  We can run counter.js directly
    To execute counter.js - 
-   open the terminal 
-   use node counter.js
+   
+   open the terminal and then
+   
+   use run  node counter.js
 
 
 **Solution 3 : Component Interaction** 
