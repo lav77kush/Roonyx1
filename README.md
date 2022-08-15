@@ -18,7 +18,7 @@ https://github.com/lav77kush/Roonyx2
 
 **Solution 4 : Code Review** 
 
-
+`
 @Component({
 selector: 'app-user-panel',
 template: `<button class="user-panel">{{ getUserName() }}</button>`,
@@ -33,6 +33,7 @@ this._authService
 .subscribe(user => {
 this._user = user;
 });
+`
 
 
 **1) What’s wrong with this code snippet?**
@@ -46,7 +47,7 @@ Every time the button is clicked, the getUserName() function is executed.
 
 Because Angular cannot predict whether the return value of getUserName() has changed, it needs to execute the function every time change detection runs.
 
-So if change detection runs 100 times, the function is called 300 times, even if its return value never changes.
+So if change detection runs 100 times, the function is called 100 times, even if its return value never changes.
 
 
 
@@ -61,10 +62,10 @@ By telling Angular that a pipe is pure, Angular knows that the pipe’s return v
 
 **3) What benefits and drawbacks of each method?** 
 ## For first apporach: 
-   Benefits: 
-   we can use pure pipes to avoid multiple function calls in every Angular's change detection cycle.
-   Drawbacks: 
-   Pure pipes only execute when their input values change.
+    Benefits: 
+    we can use pure pipes to avoid multiple function calls in every Angular's change detection cycle.
+    Drawbacks: 
+    Pure pipes only execute when their input values change.
 ## For Second apporach: 
     Benefits: By storing calculated value in a variable, we can easily use it in both component and tempalte.
     Drawbacks: have to first create a method to calculate the expected value and then store it in a declared variable. 
